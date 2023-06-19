@@ -1,12 +1,39 @@
+POST http://localhost:3000/api/v1/user
+Content-type: application/json
 
-#POST http://localhost:3000/user
-#Content-type: application/json
-#{
-#    "name": "usuario teste",
-#    "email": "teste@email.com",
-#    "login": "loginTeste",
-#    "password": "senhaTeste"
-#}
+{
+    "name": "usuario teste",
+    "email": "teste123@email.com",
+    "login": "loginTeste123",
+    "password": "Teste123!"
+}
+###
 
+GET http://localhost:3000/api/v1/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjEzNjE2LCJleHAiOjE2ODcyMTM3OTZ9.EiKLamlC3H-B_NBiXLunlQwfoUABkwIwZdhaHGEgSD8
 
-GET http://localhost:3000/user
+###
+GET http://localhost:3000/api/v1/user/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjEzNjE2LCJleHAiOjE2ODcyMTM3OTZ9.EiKLamlC3H-B_NBiXLunlQwfoUABkwIwZdhaHGEgSD8
+
+###
+
+PATCH http://localhost:3000/api/v1/user/1
+Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImxvZ2luIjoibG9naW5UZXN0ZSIsImlhdCI6MTY4NzIxMDY2NSwiZXhwIjoxNjg3MjEwNzI1fQ.rLuU-stiW4Zousr8Yj7pp0gqPjvxzMyV5z8n_kmUErs"
+Content-type: application/json
+
+{
+    "name": "usuario teste put",
+    "email": "putTeste@email.com"
+}
+
+###
+POST http://localhost:3000/api/auth/login
+Content-type: application/json
+
+{
+    "login": "loginTeste123",
+    "password": "$2b$10$OgnpZAQMJnlL.LLHTQJAkeE266t0WZruR4eQkhW4m9BDPmHm7wdKC"
+}
+
+###
