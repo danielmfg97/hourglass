@@ -18,7 +18,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsI
 
 ###
 
-PATCH http://localhost:3000/api/v1/user/1
+PUT http://localhost:3000/api/v1/user/1
 Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImxvZ2luIjoibG9naW5UZXN0ZSIsImlhdCI6MTY4NzIxMDY2NSwiZXhwIjoxNjg3MjEwNzI1fQ.rLuU-stiW4Zousr8Yj7pp0gqPjvxzMyV5z8n_kmUErs"
 Content-type: application/json
 

@@ -1,0 +1,30 @@
+POST http://localhost:3000/api/v1/project
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjE1NTg3LCJleHAiOjE2ODcyMTU3Njd9.fPgw6RRTuwpsbWs5H68b36ChfG695M2rZ2KaXMaQQi8
+Content-type: application/json
+
+
+{
+    "title": "projeto teste",
+    "description": "projeto teste descrição",
+    "user_id": [1,2]
+}
+###
+
+GET http://localhost:3000/api/v1/project
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjE1NTg3LCJleHAiOjE2ODcyMTU3Njd9.fPgw6RRTuwpsbWs5H68b36ChfG695M2rZ2KaXMaQQi8
+
+###
+GET http://localhost:3000/api/v1/project/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjE1NTg3LCJleHAiOjE2ODcyMTU3Njd9.fPgw6RRTuwpsbWs5H68b36ChfG695M2rZ2KaXMaQQi8
+
+###
+
+PATCH http://localhost:3000/api/v1/project/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjE1NTg3LCJleHAiOjE2ODcyMTU3Njd9.fPgw6RRTuwpsbWs5H68b36ChfG695M2rZ2KaXMaQQi8
+Content-type: application/json
+
+{
+    "title": "teste patch",
+    "description": "teste patch",
+    "user_id": [2]
+}

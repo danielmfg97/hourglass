@@ -1,7 +1,7 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm"
 
 @Entity({name: 'projects'})
-export class User {
+export class Project {
     @PrimaryGeneratedColumn()
     id: number;
 
@@ -11,7 +11,7 @@ export class User {
     @Column()
     description: string;
 
-    @Column()
+    @Column('simple-array', { nullable: true })
     user_id: number[];
 
     @CreateDateColumn({type: 'timestamp'})

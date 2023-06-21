@@ -5,6 +5,7 @@ import { User } from './models/user.model';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
 import { ProjectModule } from './project/project.module';
+import { HourModule } from './hour/hour.module';
 
 @Module({
   imports: [
@@ -16,13 +17,14 @@ import { ProjectModule } from './project/project.module';
       username: process.env.TYPEORM_USERNAME,
       password: process.env.TYPEORM_PASSWORD,
       database: process.env.TYPEORM_DATABASE,
-      entities: [__dirname + '/**/*.model{.js,.ts}'],
+      entities: [__dirname + '/../**/*.model.{js,ts}'],
       synchronize: true
     } as TypeOrmModuleOptions),
     TypeOrmModule.forFeature([User]),
     UserModule,
     AuthModule,
-    ProjectModule
+    ProjectModule,
+    HourModule
   ],
   controllers: [],
   providers: [],
