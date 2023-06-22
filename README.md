@@ -86,6 +86,9 @@ You could also use Postman or Insomnia
 
 Most of the requests are protected by JWT so for them to work you have to create a user first and then login to get the token needed by the authentication method.
 
+Video with explanation:
+https://youtu.be/dBYLBU0uzVw
+
 ## Installation
 
 ```bash
