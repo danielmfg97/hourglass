@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { Repository } from 'typeorm';
@@ -14,25 +14,29 @@ export class UserService {
 
   }
   create(createUserDto: CreateUserDto) {
-    const user = this.userRepo.create(createUserDto);
-    return this.userRepo.save(user)
+    try {      
+      const user = this.userRepo.create(createUserDto);
+      return this.userRepo.save(user)
+    } catch (error) {
+      throw new BadRequestException(error.message);
+    }
   }
 
   findAll() {
     return this.userRepo.find({select:['id', 'name', 'email']});
   }
 
-  findOne(id: number) {
-    try {
-      return this.userRepo.findOneOrFail({
-        select:['id', 'name', 'email'],
-        where: {
-            id: id,
-        },
+  async findOne(id: number) {
+    const user = await this.userRepo.findOne({
+      select:['id', 'name', 'email'],
+      where: {
+          id: id,
+      },
     });
-    } catch (error) {
-      throw new NotFoundException(error.message);
-    }
+    
+    if(!user) throw new NotFoundException;
+
+    return user;
   }
 
   findByLogin(login: string) {

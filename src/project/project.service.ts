@@ -21,16 +21,17 @@ export class ProjectService {
     return this.projectRepo.find();
   }
 
-  findOne(id: number) {
-    try {
-      return this.projectRepo.findOneOrFail({
-        where: {
-            id: id,
-        },
+  async findOne(id: number) {
+    const project = await this.projectRepo.findOne({
+      where: {
+          id: id,
+      },
     });
-    } catch (error) {
-      throw new NotFoundException(error.message);
-    }
+    
+    console.log(project)
+    if(!project) throw new NotFoundException
+    
+    return project;    
   }
 
   async update(id: number, updateProjectDto: UpdateProjectDto) {

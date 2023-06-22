@@ -24,7 +24,67 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The application's target audience is professionals who need to record working hours in associated projects.
+
+A RESTful API must be developed to meet the functional requirements of the visual project already presented.
+In this API we have 3 main entities: user, project and time. The relationship would be: - Users have projects;
+- Projects have recorded working times;
+- A user has multiple projects;
+- A project has multiple users;
+- A project has multiple recorded times;
+- A registered time has only one associated project;
+- One time has one user;
+
+## Tasks Breakdown and estimated time;
+
+- Study and understanding the project - 1 hour
+- Choosing which techologies to use - 1 hour 
+- Project creation and initial setup - 1 hour
+  - Git repository creation - 10 minutes
+  - Architecture definement and database definement - 10 minutes
+  - Project initialization - 10 minutes
+  - Project initial setup (Database setup, configuration setup) - 30 minutes
+
+- Development
+  - Users module setup and development - 4:30 hours
+    - Database entity creation - 30 minutes
+    - Users module methods development - 3 hours
+    - Tests and creation of the tests files - 1 hour
+
+  - Projects module setup and development - 4:30 hours
+    - Database entity creation - 30 minutes
+    - Projects module methods development - 3 hours
+    - Tests and creation of the tests files - 1 hour
+
+  - Hours module setup and development - 4:30 hours
+    - Database entity creation - 30 minutes
+    - Users module methods development - 3 hours
+    - Tests and creation of the tests files - 1 hour
+
+  - Auth module setup and development - 4:30 hours
+    - JWT inicial setup and definition of keys - 30 minutes
+    - Login logic development - 1 hour
+    - Token logic development - 1 hour
+    - Applying private/public routes logic into the API's routes - 1 hour
+    - Tests and creation of the tests files - 1 hour
+
+  - Tests - 2:30 hours
+
+    - Overall test of the project - 1:30 hour
+    - Logic tests and final ajustments - 1 hour
+
+- Total hours - 23:30
+
+  
+## How to test
+
+The application was setup to run on port :3000 and the database on port 9000:80 (pgAdmins), so make sure they are not being used by any other software.
+
+There is a "http-tests" folder in the project already configured and setup for the requests with four different files, one for each module. In order to use those requests you have to have the "http-client" extension installed on your vs-code, after installed, there'll be a "Send Request" option on top of every request.
+
+You could also use Postman or Insomnia
+
+Most of the requests are protected by JWT so for them to work you have to create a user first and then login to get the token needed by the authentication method.
 
 ## Installation
 
@@ -38,35 +98,15 @@ $ npm install
 # development
 $ npm run start
 
-# watch mode
-$ npm run start:dev
+# the project contains docker
+$ docker-compose up --build
 
-# production mode
-$ npm run start:prod
+#to go inside the container
+$ docker-compose exec app bash
+
+#kill the application
+$ docker-compose down
 ```
-
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 

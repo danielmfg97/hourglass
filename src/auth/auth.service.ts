@@ -27,11 +27,9 @@ export class AuthService {
       return null;
     }
 
-    const isPasswordValid = compareSync(password, user.password);
+    const isPasswordValid = compareSync(password, user.password)
 
-    if(password !== user.password){
-      return null
-    }
+    if(!isPasswordValid) return null;
 
     return user;
   }

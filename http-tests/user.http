@@ -10,21 +10,21 @@ Content-type: application/json
 ###
 
 GET http://localhost:3000/api/v1/user
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjEzNjE2LCJleHAiOjE2ODcyMTM3OTZ9.EiKLamlC3H-B_NBiXLunlQwfoUABkwIwZdhaHGEgSD8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MzkxNTIzLCJleHAiOjE2ODczOTMzMjN9.pZfyp_oMaBrVy4LB0e_9OWBL5-29PHDSiijC5Wk0_qQ
 
 ###
-GET http://localhost:3000/api/v1/user/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MjEzNjE2LCJleHAiOjE2ODcyMTM3OTZ9.EiKLamlC3H-B_NBiXLunlQwfoUABkwIwZdhaHGEgSD8
+GET http://localhost:3000/api/v1/user/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MzkxNTIzLCJleHAiOjE2ODczOTMzMjN9.pZfyp_oMaBrVy4LB0e_9OWBL5-29PHDSiijC5Wk0_qQ
 
 ###
 
-PUT http://localhost:3000/api/v1/user/1
-Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImxvZ2luIjoibG9naW5UZXN0ZSIsImlhdCI6MTY4NzIxMDY2NSwiZXhwIjoxNjg3MjEwNzI1fQ.rLuU-stiW4Zousr8Yj7pp0gqPjvxzMyV5z8n_kmUErs"
+PUT http://localhost:3000/api/v1/user/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjYsImVtYWlsIjoidGVzdGUxMjNAZW1haWwuY29tIiwiaWF0IjoxNjg3MzkxNTIzLCJleHAiOjE2ODczOTMzMjN9.pZfyp_oMaBrVy4LB0e_9OWBL5-29PHDSiijC5Wk0_qQ
 Content-type: application/json
 
 {
-    "name": "usuario teste put",
-    "email": "putTeste@email.com"
+    "name": "teste123@email.com",
+    "email": "teste123@email.com"
 }
 
 ###
